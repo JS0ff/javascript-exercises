@@ -7,11 +7,12 @@ const removeFromArray = function (array, first, second) {
       console.log(`Found it! ${array[i]}`);
       array.splice(i, 1);
       console.log(array);
+      // Checks if the next value in array has the same value
       if (second === array[i]) {
         array.splice(i, 1);
       }
     }
-
+    // Copy of the above condition but for the first value in funciton
     if (first === array[i]) {
       console.log("Found it!!!", `${array[i]}`);
       array.splice(i, 1);
