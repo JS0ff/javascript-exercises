@@ -27,3 +27,5 @@ console.log(sumAll(2.5, 4));
 
 // Do not edit below this line
 module.exports = sumAll;
+
+console.log();
