@@ -1,6 +1,8 @@
 const repeatString = function (word, amount) {
   let finalWord = "";
-  {
+  if (amount < 0) {
+    finalWord = "ERROR";
+  } else {
     for (let i = 0; i < amount; i++) {
       finalWord += word;
     }
