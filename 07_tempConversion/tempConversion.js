@@ -6,6 +6,14 @@ const convertToCelsius = function (temp) {
   return celsius;
 };
 
+const convertToFahrenheit = function (temp) {
+  let fahrenheit = (temp * 9) / 5 + 32;
+  if (!Number.isInteger(fahrenheit)) {
+    fahrenheit = Number(fahrenheit.toFixed(1));
+  }
+  return fahrenheit;
+};
+
 // Do not edit below this line
 module.exports = {
   convertToCelsius,
