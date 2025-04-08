@@ -23,7 +23,13 @@ const power = function (a, b) {
   return a ** b;
 };
 
-const factorial = function () {};
+const factorial = function (number) {
+  let arr = [];
+  for (let i = 1; i <= number; i++) {
+    arr.push(i);
+  }
+  return arr.reduce((result, item) => result * item, 1);
+};
 
 // Do not edit below this line
 module.exports = {
