@@ -10,7 +10,10 @@ const subtract = function (a, b) {
   return result;
 };
 
-const sum = function () {};
+const sum = function (arr) {
+  let sum = arr.reduce((sum, item) => (sum += item), 0);
+  return sum;
+};
 
 const multiply = function () {};
 
