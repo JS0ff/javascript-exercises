@@ -15,9 +15,11 @@ const sum = function (arr) {
   return sum;
 };
 
-const multiply = function () {};
+const multiply = function (arr) {
+  return (result = arr.reduce((product, item) => (product *= item)));
+};
 
-const power = function () {};
+const power = function (a, b) {};
 
 const factorial = function () {};
 
