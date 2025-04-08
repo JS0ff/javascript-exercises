@@ -1,9 +1,14 @@
-const add = function (arr) {
-  sum = arr.reduce((sum, item) => (sum += item));
+const add = function (a, b) {
+  arr = [a, b];
+  let sum = arr.reduce((sum, item) => (sum += item));
   return sum;
 };
 
-const subtract = function () {};
+const subtract = function (a, b) {
+  arr = [a, b];
+  let result = arr.reduce((sum, item) => (sum -= item));
+  return result;
+};
 
 const sum = function () {};
 
