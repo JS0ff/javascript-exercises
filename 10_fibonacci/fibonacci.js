@@ -4,6 +4,8 @@ const fibonacci = function (number) {
   // 0's element of an fibonacci sequence is 0;
   if (number === 0) {
     return 0;
+  } else if (number < 0) {
+    return "OOPS";
   }
   //Full array elements with fibonacci sequence
   for (let i = 0; i < number; i++) {
