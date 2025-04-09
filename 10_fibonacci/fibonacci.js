@@ -1,5 +1,9 @@
 const fibonacci = function (number) {
+  //Create an empty array
   const arr = [];
+
+  // Transform into number
+  number = Number(number);
 
   // 0's element of an fibonacci sequence is 0;
   if (number === 0) {
