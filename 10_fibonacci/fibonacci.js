@@ -1,5 +1,10 @@
 const fibonacci = function (number) {
   const arr = [];
+
+  // 0's element of an fibonacci sequence is 0;
+  if (number === 0) {
+    return 0;
+  }
   //Full array elements with fibonacci sequence
   for (let i = 0; i < number; i++) {
     if (i === 0) {
