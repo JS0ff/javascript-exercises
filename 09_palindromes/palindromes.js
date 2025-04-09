@@ -3,9 +3,11 @@ const palindromes = function (string) {
   // all items are lowercase
   let arr = string.toLowerCase().split("");
 
+  //Check every element for the punctuation and deletes it
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === "!") {
+    if (arr[i] === "!" || arr[i] === " " || arr[i] === "." || arr[i] === ",") {
       arr.splice(i, 1);
+      i--;
     }
   }
   console.log(arr);
