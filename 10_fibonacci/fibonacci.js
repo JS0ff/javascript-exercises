@@ -14,16 +14,14 @@ const fibonacci = function (number) {
   }
   //Full array elements with fibonacci sequence
   for (let i = 0; i < number; i++) {
-    if (i === 0) {
-      arr.push(1);
-    } else if (i === 1) {
+    if (i === 0 || i === 1) {
       arr.push(1);
     } else if (i > 1) {
       arr.push(arr[i - 1] + arr[i - 1 - 1]);
     }
   }
   // Return user value of fibonacci
-  return arr[arr.length - 1];
+  return arr[arr.length - 1]; // return last item
 };
 
 // Do not edit below this line
