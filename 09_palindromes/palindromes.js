@@ -1,25 +1,20 @@
 const palindromes = function (string) {
   // Create an array of string elements
   // all items are lowercase
-  let arr = string.toLowerCase().split("");
 
-  //Check every element for the punctuation and deletes it
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === "!" || arr[i] === " " || arr[i] === "." || arr[i] === ",") {
-      arr.splice(i, 1);
-      i--;
-    }
-  }
-  console.log(arr);
+  let validChar = "abcdefghijklmnopqrstuvwxyz123456790";
 
+  // Declare and check if the string has any punctuation
+  let arr = string
+    .toLowerCase()
+    .split("")
+    .filter((item) => validChar.includes(item));
+
+  //Reverse main array
   let reverseArr = arr.map((item) => item).reverse();
 
   // Check if words are similar;
-  if (arr.join("") === reverseArr.join("")) {
-    return true;
-  } else {
-    return false;
-  }
+  return arr.join("") === reverseArr.join("") ? true : false;
 };
 
 // Do not edit below this line
