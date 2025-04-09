@@ -5,6 +5,7 @@ const fibonacci = function (number) {
   if (number === 0) {
     return 0;
   } else if (number < 0) {
+    // Return string if negative user number
     return "OOPS";
   }
   //Full array elements with fibonacci sequence
