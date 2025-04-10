@@ -7,7 +7,14 @@ const findTheOldest = function (obj) {
       ? (item.yearOfDeath = presentYear)
       : item.yearOfDeath
   );
-  return obj;
+  const oldest = obj.reduce(
+    (oldest, item) =>
+      oldest < item.yearOfDeath - item.yearOfBirth
+        ? (oldest = item.yearOfDeath - item.yearOfBirth)
+        : oldest,
+    0
+  );
+  return oldest;
 };
 
 // Do not edit below this line
