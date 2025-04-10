@@ -7,6 +7,8 @@ const findTheOldest = function (obj) {
       ? (item.yearOfDeath = presentYear)
       : item.yearOfDeath
   );
+
+  //Search oldest person in the object
   const oldest = obj.reduce(
     (oldest, item) =>
       oldest < item.yearOfDeath - item.yearOfBirth
@@ -14,7 +16,11 @@ const findTheOldest = function (obj) {
         : oldest,
     0
   );
-  return oldest;
+
+  //Use the filter method to search for the oldest person's object
+  return obj.filter(
+    (item) => item.yearOfDeath - item.yearOfBirth === oldest
+  )[0]; //Return an object without an array
 };
 
 // Do not edit below this line
